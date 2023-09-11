@@ -1,18 +1,13 @@
-package com.example.robotarm.entity;
+package com.example.robotarm.dto;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Getter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Getter
-@Table(name="user")
-public class Member {
-    @Id
+@Data
+@NoArgsConstructor
+public class MemberRequest {
     private Long user_password;
 
     private int company_id;
@@ -28,7 +23,4 @@ public class Member {
     private LocalDateTime user_join_at = LocalDateTime.now();
     private int user_edit_at;
     private int secession_at;
-
-
-
 }
