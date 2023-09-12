@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web을 통한 항만 건설 Robot 제어</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="select robot.js"></script>
+<body class="h-screen">
+  <!-- Container -->
+  <div class="container mx-auto px-4 h-full">
+    <!-- Align center -->
+    <div class="flex items-center justify-center h-full w-full">
+      <!-- Select menu div contains custom arrow -->
+      <div
+           class="relative mb-2 flex items-center after:w-[8px] after:h-[8px] after:border-black/70 after:border-b after:border-r after:transform after:rotate-45 after:absolute after:right-3">
+        <!-- Select menu -->
+        <select required
+                class="text-black/70 bg-white px-3 py-2 transition-all cursor-pointer hover:border-blue-600/30 border border-gray-200 rounded-lg outline-blue-600/50 appearance-none invalid:text-black/30 w-64">
+          <option value="" disabled selected>추가할 로봇을 선택, 연결하세요.</option>
+          <option value="option1">로봇 1</option>
+          <option value="option2">로봇 2</option>
+          <option value="option3">로봇 3</option>
+          <option value="option4">로봇 4</option>
+          <option value="option5">로봇 5</option>
+          
+        </select>
+      </div>
+     
+      <button style="margin-top: -2em; margin-right : 0em;"><a href="updating soon.html" class="btn mt-4"> 연결</a></button>
+      
+    </div>
+    
+  </div>
+  
+</body>
+</head>
+</html>

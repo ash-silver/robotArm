@@ -1,4 +1,4 @@
-package com.example.shop.config;
+package com.example.robotarm.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
