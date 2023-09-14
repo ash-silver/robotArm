@@ -28,6 +28,6 @@
                   #{user_password},
                   #{company_id},
                   now()
-              )
+              );
     </insert>
 </mapper>

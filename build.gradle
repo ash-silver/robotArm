@@ -29,6 +29,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '3.0.1'
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
+
 }
 
 tasks.named('test') {

@@ -1,5 +1,6 @@
 package com.example.robotarm.controller;
 
+import com.example.robotarm.Model.Member;
 import com.example.robotarm.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,8 @@ public class MemberController {
         return "loginForm";
     }
     @GetMapping("/join")
-    public String joinForm() {
+    public String joinForm(Member member) {
+        memberService.MemberAdd(member);
         return "joinForm";
     }
     @GetMapping("/logout")
