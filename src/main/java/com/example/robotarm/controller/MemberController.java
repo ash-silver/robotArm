@@ -17,10 +17,6 @@ public class MemberController {
     public String index() {
         return "index";
     }
-    @GetMapping("/home")
-    public String home(){
-        return "home";
-    }
     @GetMapping("/login")
     public String loginForm() {
         return "loginForm";
