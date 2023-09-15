@@ -7,7 +7,6 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="C:\Users\USER\Desktop\robotArm-master\src\main\resources\static\css\Style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://github.com/ash-silver/robotArm/blob/master/src/main/resources/static/js/Select%20Robot.js"></script>
 <body class="h-screen">
   <!-- Container -->
   <div class="container mx-auto px-4 h-full">
@@ -19,24 +18,55 @@
         <!-- Select menu -->
         <!--form 태그 이용해서 로봇을 선택하고 결정을 할 때 어디로 넘어갈 지를 선택하도록
         th:action="@{/-->
-        <select required
-                class="text-black/70 bg-white px-3 py-2 transition-all cursor-pointer hover:border-blue-600/30 border border-gray-200 rounded-lg outline-blue-600/50 appearance-none invalid:text-black/30 w-64">
-          <option value="" disabled selected>추가할 로봇을 선택, 연결하세요.</option>
-          <option value="option1">로봇 1</option>
-          <option value="option2">로봇 2</option>
-          <option value="option3">로봇 3</option>
-          <option value="option4">로봇 4</option>
-          <option value="option5">로봇 5</option>
-          
-        </select>
+        <form action="/control" method="post">
+          <select required
+                  class="text-black/70 bg-white px-3 py-2 transition-all cursor-pointer hover:border-blue-600/30 border border-gray-200 rounded-lg outline-blue-600/50 appearance-none invalid:text-black/30 w-64">
+            <option value="" disabled selected>추가할 로봇을 선택, 연결하세요.</option>
+            <option value="user_robot1">로봇 1</option>
+            <option value="user_robot2">로봇 2</option>
+            <option value="user_robot3">로봇 3</option>
+            <option value="user_robot4">로봇 4</option>
+            <option value="user_robot5">로봇 5</option>
+            
+          </select>
+          <input type="submit" class="btn mt-4" value="연결">
+        </form>
       </div>
      
-      <button style="margin-top: -2em; margin-right : 0em;"><a href="updating soon.html" class="btn mt-4"> 연결</a></button>
-      
     </div>
     
   </div>
-  
+    
 </body>
-</head>
+<script>
+const selectRobot = document.querySelector("select");
+const buttonConnect = document.querySelector("a");
+
+buttonConnect.addEventListener("click", () => {
+  const selectedValue = selectRobot.value;
+
+  // 선택한 로봇 정보를 전송합니다.
+  // fetch() API를 사용하여 데이터를 전송합니다.
+
+  const url = "/control";
+  const data = {
+    "selected_robot": selectedValue
+  };
+
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.status === 200) {
+      // 전송 성공
+    } else {
+      // 전송 실패
+    }
+  })
+  .catch(error => {
+    // 에러 처리
+  });
+});
+</script>
 </html>
