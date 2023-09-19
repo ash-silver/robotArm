@@ -5,6 +5,7 @@ import com.example.robotarm.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -23,11 +24,18 @@ public class MemberController {
     }
     @GetMapping("/join")
     public String joinForm(Member member) {
+        return "joinForm";
+    }
+
+    @PostMapping("/join")
+    public String join(Member member){
         memberService.MemberAdd(member);
         return "joinForm";
     }
     @GetMapping("/logout")
     public String logout() {
-        return "home";
+        return "index";
     }
+
+
 }

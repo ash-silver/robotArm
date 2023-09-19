@@ -16,8 +16,8 @@ public class Member {
     private int user_id;
 
     private String user_name;
-    private Long user_password;
-    private Long user_email;
+    private String user_password;
+    private String user_email;
 
     private int company_id;
     private int user_robot1;

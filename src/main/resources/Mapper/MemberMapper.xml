@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.project.mapper.MemberMapper">
-    <resultMap type="com.project.model.Member" id="MemberMap">
+<mapper namespace="com.example.robotarm.Mapper.MemberMapper">
+    <resultMap type="com.example.robotarm.Model.Member" id="MemberMap">
         <id property="m_id" column="m_id" /> <!-- Primary Key -->
         <result property="user_name" column="user_name" />
         <result property="user_email" column="user_email" />
@@ -19,7 +19,7 @@
         <result property="user_edit_at" column="user_edit_at" />
         <result property="secession_at" column="secession_at" />
     </resultMap>
-    <insert id="MemberAdd" parameterType="com.project.model.Member">
+    <insert id="MemberAdd" parameterType="com.example.robotarm.Model.Member">
         INSERT INTO member(
             user_name,user_email, user_password,company_id,user_join_at)
         VALUES(
