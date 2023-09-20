@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-public class IndexController {
-    @GetMapping("/SelectMenu")
-    public String SelectMenu(){
-        return "SelectMenu";
+@RequestMapping("/robot")
+public class RobotController {
+    @GetMapping("/SelectRobot")
+    public String selectRobot(){
+        return "SelectRobot";
     }
 }
