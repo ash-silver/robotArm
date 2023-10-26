@@ -30,4 +30,13 @@
                   now()
               );
     </insert>
+
+    <select id="isMember" parameterType="String" resultType="com.example.robotarm.Model.Member">
+        SELECT
+            <include refid="postColumns" />
+        FROM
+        member
+        WHERE
+            user_email = #{user_email};
+    </select>
 </mapper>

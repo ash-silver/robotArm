@@ -14,4 +14,10 @@ public class MemberService {
     public void MemberAdd(Member m) {
         memberMapper.MemberAdd(m);
     }
+
+    @Transactional
+    public Member isMember(String user_email){
+//        memberMapper.isMember(user_email);
+        return memberMapper.isMember(user_email);
+    }
 }
