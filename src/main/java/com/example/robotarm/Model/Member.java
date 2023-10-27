@@ -29,7 +29,7 @@ public class Member {
     private int user_favorites1;
     private int user_favorites2;
     private int user_favorites3;
-    private LocalDateTime user_join_at = LocalDateTime.now();
+    private  LocalDateTime user_join_at = LocalDateTime.now();
     private int user_edit_at;
     private int secession_at;
 }

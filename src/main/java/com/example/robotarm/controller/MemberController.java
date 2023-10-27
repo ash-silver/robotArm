@@ -27,16 +27,13 @@ public class MemberController {
 
     @PostMapping("/login")
     public String loginForm(String user_email, String user_password, HttpServletRequest request, HttpSession session){
-        System.out.println("not start");
         Member m = memberService.isMember(user_email);
-        System.out.println("memberservice end");
         if(m != null){
             session.setAttribute("user_email", user_email);
         }
         else{
             return "/member/join";
         }
-        System.out.println("if sentence end");
         return "redirect:/index";
     }
 
@@ -51,8 +48,9 @@ public class MemberController {
         return "joinForm";
     }
     @GetMapping("/logout")
-    public String logout() {
-        return "index";
+    public String logout(HttpServletRequest request, HttpSession session) {
+        session.invalidate();
+        return "redirect:/index";
     }
 
 
