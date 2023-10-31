@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -12,20 +13,20 @@
             overflow: hidden;
         }
 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            width: 60%;
             height: 100%;
         }
     </style>
 </head>
 <body>
 
-<img url="/img/robot.png" alt="로봇 이미지">
-
+<img th:src="@{/img/robot.png}" alt="로봇 이미지">
 </body>
-</head>
-</script>
 </html>
