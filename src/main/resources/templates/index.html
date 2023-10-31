@@ -43,7 +43,15 @@
                 </p>
             </div>
             <div th:if="${session.user_email == null}">
+                <style>
+                    p {
+                        text-align: center;
+                    }
+                </style>
+                <p>
+
                 <a href="member/join" class="btn">로그인/회원가입</a>
+                </p>
             </div>
         </div>
         </p>
