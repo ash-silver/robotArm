@@ -23,4 +23,8 @@ public class IndexController {
     public String addRobot(){
         return "addRobot";
     }
+    @GetMapping("/robotImage")
+    public String robotImage(){
+        return "robotImage";
+    }
 }
