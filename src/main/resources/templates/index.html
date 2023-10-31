@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web을 통한 항만 건설 Robot 제어</title>
+<!--
     <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=156ftzpMjHY0Zot6bB7FY_I0L1qAxg919">
+-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="v-header container">
@@ -16,16 +19,24 @@
     <div class="header-overlay"></div>
     <div class="header-content text-md-center">
         <h1 style="text-align: center;">스마트해상물류 ICT 멘토링</h1>
-        <div>
-            .
-        </div>
-        <h1>Web을 통한 항만 건설 Robot 제어[23_HP069] [2023-04-17~ 2023-11-15]</h1>
-        <h2 style="text-align: center;">김기훈 박재은 박정훈 이현진</h2>
+
+        <h1 style="text-align: center;">Web을 통한 항만 건설 Robot 제어[23_HP069]</h1>
+        <h1 style="text-align: center;">[2023-04-17~ 2023-11-15]</h1>
+        <h2 style="text-align: center;">멘토 : 임창현</h2>
+        <h2 style="text-align: center;">멘티 : 이현진 김기훈 박재은 박정훈</h2>
         <!--현진님 밑에처럼 해주시면 페이지 넘어갑니다 -> Controller 참고 -->
 
         <div class="member">
             <div th:if="${session.user_email != null}">
+<!--
                 <p class="mb-0 mt-4 text-center">
+-->
+            <style>
+                p {
+                    text-align: center;
+                }
+            </style>
+                <p >
                     <a href="joinForm" class="btn">뒤로가기</a>
                     <a href="SelectMenu" class="btn">시작하기</a>
                     <a href="member/logout" class="btn">로그아웃</a>

@@ -18,4 +18,9 @@ public class IndexController {
     public String go(){
         return "index";
     }
+
+    @GetMapping("/addRobot")
+    public String addRobot(){
+        return "addRobot";
+    }
 }

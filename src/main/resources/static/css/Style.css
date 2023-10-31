@@ -257,7 +257,7 @@ h6 span{
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: #ffeba7;
+  background-color: #A6BAC5;
   color: #102770;
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
 }
@@ -289,3 +289,7 @@ h6 span{
 	width: auto;
 	display: block;
 }
+/*
+.centered-text {
+  text-align: center;
+}*/
