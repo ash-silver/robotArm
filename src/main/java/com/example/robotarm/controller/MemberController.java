@@ -32,7 +32,7 @@ public class MemberController {
             session.setAttribute("user_email", user_email);
         }
         else{
-            return "/member/join";
+            return "member/join";
         }
         return "redirect:/index";
     }
